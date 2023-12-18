@@ -25,12 +25,31 @@ cd fedora-resolve && sudo ./install.sh
 
 ## Things to consider next
 
+### No mp4 import / AAC audio format
+
 As you might have read already, it is currently impossible to import mp4 files on the free Linux version of Davinci Resolve (not an issue on the Studio version), so you may want to use `ffmpeg` via RPM Fusion:
 ```
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install ffmpeg
 ```
-Next, you'll have to manually convert every .mp4 file you want to work with to .mov via Terminal, here's an example below:
+Next, there are two ways to go about converting video formats:
+
+1. manual conversion of .mp4 files you want to work with to .avi or .mov via Terminal, for example:
 ```
 ffmpeg -i raw_footage.mp4 -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov footage_mjpeg.mov
 ```
+2. batch conversion of .mp4 files in a folder to .avi or .mov via Terminal, for example:
+```
+for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+```
+
+Either way, you need to pay close attention to your disk space after converting to .avi and .mov, or else you might end up with hundreds of gigabytes worth of converted files.
+
+### User fonts
+
+If you want to use your own fonts in Davinci Resolve for text input, you have to copy all your fonts in your system's font folder: `usr/share/fonts`
+Your local fonts installed in `.fonts` won't be seen by Davinci Resolve.
+
+## Conclusion
+
+Use Kdenlive.
