@@ -23,3 +23,14 @@ git clone https://github.com/yioannides/fedora-resolve.git
 cd fedora-resolve && sudo ./install.sh
 ```
 
+## Things to consider next
+
+As you might have read already, it is currently impossible to import mp4 files on the free Linux version of Davinci Resolve (not an issue on the Studio version), so you may want to use `ffmpeg` via RPM Fusion:
+```
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install ffmpeg
+```
+Next, you'll have to manually convert every .mp4 file you want to work with to .mov via Terminal, here's an example below:
+```
+ffmpeg -i raw_footage.mp4 -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov footage_mjpeg.mov
+```
