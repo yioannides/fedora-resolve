@@ -10,14 +10,13 @@ The reason for creating this script is because everyone using (or wanting to use
 ```
 git clone https://github.com/yioannides/fedora-resolve.git
 ```
-2. Register and download the latest version of Davinci Resolve: https://www.blackmagicdesign.com/products/davinciresolve
+2. Register and download the [latest version of Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve).
 
-3. Unzip Davinci Resolve's .zip file.
+4. Unzip Davinci Resolve's .zip file.
 
-4. Move the .run file to the `fedora-resolve` folder.
+5. Move the .run file to the `fedora-resolve` folder.
 
-5. Back in the terminal, execute the following command (requires sudo):
+6. Back in the terminal, execute the following command (requires sudo):
 ```
-cd fedora-resolve
-sudo ./install.sh
+cd fedora-resolve && sudo ./install.sh
 ```
