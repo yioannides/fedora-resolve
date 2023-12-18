@@ -40,7 +40,7 @@ ffmpeg -i raw_footage.mp4 -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov f
 ```
 2. batch conversion of .mp4 files in a folder to .avi or .mov via Terminal, for example:
 ```
-for i in *.avi; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+for i in *.mp4; do ffmpeg -i "$i" "${i%.*}.avi"; done
 ```
 
 Either way, you need to pay close attention to your disk space after converting to .avi and .mov, or else you might end up with hundreds of gigabytes worth of converted files.
