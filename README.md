@@ -12,9 +12,11 @@ git clone https://github.com/yioannides/fedora-resolve.git
 ```
 2. Register and download the latest version of Davinci Resolve: https://www.blackmagicdesign.com/products/davinciresolve
 
-3. Unzip Davinci Resolve's .zip and **move the .run file to the `fedora-resolve` folder**.
+3. Unzip Davinci Resolve's .zip
 
-4. Back in the terminal, while inside `fedora-resolve`, execute the following command (requires sudo):
+4. Move the .run file to the `fedora-resolve` folder.
+
+5. Back in the terminal, execute the following command (requires sudo):
 ```
 cd fedora-resolve
 sudo ./install.sh
