@@ -54,3 +54,8 @@ Your local fonts installed in `.fonts` won't be seen by Davinci Resolve.
 ## Conclusion
 
 Use Kdenlive.
+
+## Acknowledgments
+
+Fedora 39 pixbuf / lippango fix → MiMillie : https://youtu.be/8jVTN1kLfZw
+h.264 export plugin → Perfect Linux Gaming : https://youtu.be/NoVQz79eSpw
