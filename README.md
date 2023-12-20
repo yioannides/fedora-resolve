@@ -12,7 +12,7 @@ The reason for creating this script is because everyone using (or wanting to use
 ```
 git clone https://github.com/yioannides/fedora-resolve.git
 ```
-2. Register and download the [latest version of Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve).
+2. Register and download the [latest version of Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve).*
 
 4. Unzip Davinci Resolve's .zip file.
 
@@ -22,6 +22,7 @@ git clone https://github.com/yioannides/fedora-resolve.git
 ```
 cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
+<sup>* if someone knows of a way to bypass registration and download the latest version of DR via `curl` or whatever, please let me know.</sup>
 
 ## Things to consider next
 
@@ -53,7 +54,11 @@ Your local fonts installed in `.fonts` won't be seen by Davinci Resolve.
 
 ## Conclusion
 
-Use Kdenlive.
+I wrote this shell script as a personal challenge (because I am not a programmer), but upon completing it, I realized how unoptimized (the free version of) Davinci Resolve for Linux is.
+
+Surely figuring out how to properly install and use DR on Linux is a small victory in itself, but batch converting mp4 videos every time I want to drag and drop something in DR is not my idea of productivity and above all, the notion that a piece of software is this hard to install completely put me off.
+
+With that said, I switched to Kdenlive and I'm currently very happy with it. I would also like to recommend [Lightworks](https://lwks.com/) that works great on Linux; it's very easy to install, offers a beautiful UI (very similar to DR) and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering.
 
 ## Acknowledgments
 
