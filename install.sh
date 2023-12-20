@@ -6,13 +6,13 @@ echo
 sleep 1
 
 # installing prerequisites
-sudo dnf install mesa-libGLU -y
+sudo dnf install -y mesa-libGLU rocm-opencl
 
 # installing NVIDIA drivers
 lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia
 
 # installing rocm-opencl for AMD drivers
-lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
+# lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
 
 # installing DaVinci Resolve
 chmod +x ./*.run
