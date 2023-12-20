@@ -6,10 +6,10 @@ echo
 sleep 1
 
 # installing prerequisites
-sudo dnf install -y mesa-libGLU rocm-opencl
+sudo dnf install -y mesa-libGLU rocm-opencl libxcrypt-compat
 
 # installing NVIDIA drivers
-lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia libxcrypt-compat
+lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia
 
 # installing rocm-opencl for AMD drivers
 # lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
