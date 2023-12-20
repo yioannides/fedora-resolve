@@ -33,6 +33,6 @@ cd usr/lib64
 sudo cp -r * /opt/resolve/libs/
 
 # installing h.264 video encoder plugin (export only)
-sudo cp -r ~/fedora-resolve/h264/* /opt/resolve/IOPlugins/
+cp -r ~/fedora-resolve/h264/* /opt/resolve/IOPlugins/
 
 notify-send "installation completed!"
