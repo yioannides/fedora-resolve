@@ -22,7 +22,7 @@ chmod +x ./*.run
 cd /opt/resolve/libs
 mkdir _disabled
 mv libglib-2.0.so* _disabled/
-sudo cp -f /usr/lib64/libglib-2.0.so.* /opt/resolve/libs/
+sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 video encoder plugin (export only)
 # sudo cp -r '$HOME/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
