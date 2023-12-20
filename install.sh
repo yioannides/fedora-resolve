@@ -22,13 +22,7 @@ chmod +x ./*.run
 cd /opt/resolve/libs
 mkdir _disabled
 mv libglib-2.0.so* _disabled/
-cd
-mkdir pixbuf
-cd pixbuf
-wget https://dl.fedoraproject.org/pub/fedora/linux/releases/38/Everything/x86_64/os/Packages/g/gdk-pixbuf2-2.42.10-2.fc38.x86_64.rpm
-rpm2cpio ./gdk-pixbuf2-2.42.10-2.fc38.x86_64.rpm | cpio -idmv
-cd usr/lib64
-sudo cp -r * /opt/resolve/libs/
+sudo cp -r ~/fedora-resolve/pixbuf/usr/lib64/* /opt/resolve/libs/
 
 # installing h.264 video encoder plugin (export only)
 # sudo cp -r '$HOME/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
