@@ -34,11 +34,11 @@ sudo dnf install ffmpeg
 ```
 Next, there are two ways to go about converting video formats:
 
-1. manual conversion of .mp4 files you want to work with to .avi or .mov via Terminal, for example:
+- manual conversion of .mp4 files you want to work with to .avi or .mov via Terminal, for example:
 ```
 ffmpeg -i raw_footage.mp4 -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov footage_mjpeg.mov
 ```
-2. batch conversion of .mp4 files in a folder to .avi or .mov via Terminal, for example:
+- batch conversion of .mp4 files in a folder to .avi or .mov via Terminal, for example:
 ```
 for i in *.mp4; do ffmpeg -i "$i" "${i%.*}.avi"; done
 ```
