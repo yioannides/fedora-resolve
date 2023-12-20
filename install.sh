@@ -9,7 +9,7 @@ sleep 1
 sudo dnf install -y mesa-libGLU rocm-opencl
 
 # installing NVIDIA drivers
-lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia
+lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia libxcrypt-compat
 
 # installing rocm-opencl for AMD drivers
 # lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
