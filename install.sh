@@ -22,9 +22,6 @@ chmod +x ./*.run
 cd /opt/resolve/libs
 mkdir _disabled
 mv libglib-2.0.so* _disabled/
-cd ..
-mkdir IOPlugins
-sudo cp -r ~/fedora-resolve/h264/* /opt/resolve/IOPlugins/
 cd
 mkdir pixbuf
 cd pixbuf
