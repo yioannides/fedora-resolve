@@ -22,7 +22,7 @@ git clone https://github.com/yioannides/fedora-resolve.git
 ```
 cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
-<sup>* if someone knows of a way to bypass registration and download the latest version of DR via `curl` or whatever, please let me know.</sup>
+<sup>* if someone knows of a way to bypass registration and download the latest version of DR via `curl` or whatever, please let me know and I will implement it in the script.</sup>
 
 ## Things to consider next
 
