@@ -6,13 +6,13 @@ echo
 sleep 1
 
 # installing prerequisites
-sudo dnf install -y mesa-libGLU rocm-opencl libxcrypt-compat
+sudo dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU
 
 # installing NVIDIA drivers
 lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 
 # installing rocm-opencl for AMD drivers
-# lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
+lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
 
 # installing DaVinci Resolve
 chmod +x ./*.run
@@ -20,8 +20,8 @@ chmod +x ./*.run
 
 # resolving dependencies
 cd /opt/resolve/libs
-mkdir _disabled
-mv libglib-2.0.so* _disabled/
+mkdir disabled-libraries
+mv libglib-2.0.so* disabled-libraries/
 sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 video encoder plugin (export only)
