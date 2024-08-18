@@ -22,7 +22,7 @@ git clone https://github.com/yioannides/fedora-resolve.git
 ```
 cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
-<sup>* if someone knows of a way to bypass registration and download the latest version of DR via `curl` or whatever, please let me know and I will implement it in the script.</sup>
+<sup>* there are ways to bypass the registration screen, like [this python script](https://github.com/pobthebuilder/resolve-flatpak/blob/main/python/resolve_download.py) for example, but it involves autofilling bogus info, so I'm not sure Blackmagic's API will like that, so if anyone wants to build upon this script and make a PR for it, I'll be happy to implement it </sup>
 
 ## Things to consider next
 
