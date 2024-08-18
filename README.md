@@ -50,7 +50,7 @@ Either way, you need to pay close attention to your disk space after converting 
 
 If you want to use your own fonts in Davinci Resolve for text input, you have to copy all your fonts in your system's font folder: `usr/share/fonts`
 
-Your local fonts installed in `.fonts` won't be seen by Davinci Resolve.
+Your local fonts installed in `/home/$USER/.fonts` won't be seen by Davinci Resolve.
 
 ## Conclusion
 
