@@ -6,7 +6,7 @@ echo
 sleep 1
 
 # installing prerequisites
-sudo dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU
+sudo dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU --allowerasing
 
 # installing NVIDIA drivers
 lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
