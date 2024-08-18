@@ -6,7 +6,7 @@ echo
 sleep 1
 
 # installing prerequisites
-sudo dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU
+dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU
 
 # installing NVIDIA drivers
 lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
@@ -22,10 +22,10 @@ chmod +x ./*.run
 cd /opt/resolve/libs
 mkdir disabled-libraries
 mv libglib-2.0.so* disabled-libraries/
-sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
+cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 video encoder plugin (export only)
-sudo cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
+cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
 
 echo
 echo "Installation completed!"
