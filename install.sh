@@ -12,11 +12,11 @@ dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU
 lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 
 # installing rocm-opencl for AMD drivers
-lspci | grep VGA -qi "AMD" && sudo dnf install -y rocm-opencl
+lspci | grep VGA -qi "AMD" && config-manager --add-repo=http://repo.radeon.com/rocm/yum/rpm -y && sudo dnf install -y rocm
 
 # installing DaVinci Resolve
 chmod +x ./*.run
-./*.run -i -y
+SKIP_PACKAGE_CHECK=1 ./*.run -i -y
 
 # resolving dependencies
 cd /opt/resolve/libs
