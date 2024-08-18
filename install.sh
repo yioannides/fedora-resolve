@@ -22,7 +22,7 @@ SKIP_PACKAGE_CHECK=1 ./*.run -i -y
 cd /opt/resolve/libs
 mkdir disabled-libraries
 mv libglib* libgio* libmodule* libgobject* disabled-libraries
-cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
+# cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 video encoder plugin (export only)
 cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
