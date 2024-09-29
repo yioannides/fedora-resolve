@@ -9,7 +9,7 @@ The reason for creating this script is because everyone using (or wanting to use
 ## Installation instructions
 
 1. Clone this repo:
-```
+```sh
 git clone https://github.com/yioannides/fedora-resolve.git
 ```
 2. Register and download the [latest version of Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve).*
@@ -19,7 +19,7 @@ git clone https://github.com/yioannides/fedora-resolve.git
 5. Move the .run file to the `fedora-resolve` folder.
 
 6. Back in the terminal, execute the following command (requires sudo):
-```
+```sh
 cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
 <sup>* there are ways to bypass the registration screen, like [this python script](https://github.com/pobthebuilder/resolve-flatpak/blob/main/python/resolve_download.py) for example, but it involves autofilling bogus info, so I'm not sure Blackmagic's API will like that, so if anyone wants to build upon this script and make a PR for it, I'll be happy to implement it </sup>
@@ -29,18 +29,18 @@ cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ### No mp4 import / AAC audio format
 
 As you might have read already, it is currently impossible to import mp4 files on the free Linux version of Davinci Resolve (not an issue on the Studio version), so you may want to use `ffmpeg` via RPM Fusion:
-```
+```sh
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install ffmpeg
 ```
 Next, there are two ways to go about converting video formats:
 
 - manual conversion of .mp4 files you want to work with to .avi or .mov via Terminal, for example:
-```
+```sh
 ffmpeg -i raw_footage.mp4 -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov footage_mjpeg.mov
 ```
 - batch conversion of .mp4 files in a folder to .avi or .mov via Terminal, for example:
-```
+```sh
 for i in *.mp4; do ffmpeg -i "$i" "${i%.*}.avi"; done
 ```
 
