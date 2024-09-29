@@ -1,6 +1,6 @@
 tput clear
 echo
-echo -e "\033[97;44;1mDAVINCI RESOLVE INSTALLATION FOR FEDORA 39+ SCRIPT\033[0m"
+echo -e "\033[97;44;1mDAVINCI RESOLVE INSTALLATION FOR FEDORA 41+ SCRIPT\033[0m"
 echo -e "\033[1mby yiannis ioannides\033[0m"
 echo
 sleep 1
