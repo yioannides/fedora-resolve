@@ -29,9 +29,9 @@ If you prefer .avi, find the transcode alias script in `~/.bashrc` and change al
 
 ### User fonts
 
-If you want to use your own fonts in Davinci Resolve for text input, you have to copy all your fonts in your system's font folder: `usr/share/fonts`
+If you want to use your own fonts in Davinci Resolve for text input, you have to copy them in your system's font folder: `usr/share/fonts`
 
-Your local fonts installed in `/home/$USER/.fonts` won't be seen by Davinci Resolve.
+Your local user font folder in `~/.fonts` won't be seen by Davinci Resolve.
 
 ## Conclusion
 
