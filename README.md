@@ -39,7 +39,7 @@ Your local user font folder in `~/.fonts` won't be seen by Davinci Resolve.
 
 I started this shell script as a non-programmer looking for a challenge, but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is and wouldn't personally recommend it to any Linux user.
 
-My personal recommendation is [Lightworks](https://lwks.com/); a video editing software that is _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a familiar Resolve-esque UI, has a great community for technical support and all free and paid versions provide rich features.
+My personal recommendation is [Lightworks](https://lwks.com/): a video editing software that is _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a familiar Resolve-esque UI, has a great community for technical support and all free and paid versions provide rich features.
 
 Linux users deserve better, and Resolve on Linux just isn't it.
 
