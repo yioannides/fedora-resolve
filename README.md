@@ -21,7 +21,7 @@ Therefore, installing the free version of Resolve also includes:
 - a transcoder script for batch conversion from .mp4 to .mov (via `ffmpeg`)
 - an additional mp4 encoder plugin (for exporting only)
 
-To automatically batch-convert .mp4 videos to .mov, simply `cd` onto your project's media folder and type `transcode`.
+To automatically batch-convert .mp4 videos to .mov: `cd` onto your project's media folder and simply type `transcode`.
 All of the converted files will be on a new folder called "transcoded", inside your media folder.
 If you prefer .avi, find the transcode alias script in `~/.bashrc` and change all "mov" strings to "avi".
 
