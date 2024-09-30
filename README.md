@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a Davinci Resolve auto-installation script for Fedora 40+, that also includes AMD GPU fixes, as well as a h.264 video encoder plugin fix (for exporting only) and a transcoding script for free Resolve users.
+This is a Davinci Resolve auto-installation script for Fedora 40+, that also includes AMD GPU fixes, as well as a h.264 video encoder plugin fix (for exporting only) and a transcoding script for the free version of Resolve.
 
 The reason for creating this script is because everyone using (or wanting to use) Davinci Resolve on Linux knows how arduous of a process installing the aforementioned is, but also being able to use an AMD dGPU with Davinci Resolve on Linux requires you to tinker with system directories, something not recommended for the uninitiated.
 
@@ -21,10 +21,12 @@ git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve 
 Due to licensing issues, it is not possible to import mp4 files on the free Linux version of Davinci Resolve. 
 Therefore, installing the free version of Resolve also includes:
 - a transcoder script that automatically converts every .mp4 file on the user's project folder (via `ffmpeg`) and converts them to .mov files in a new folder
-- an additional mp4 encoder plugin (for export only)
+- an additional mp4 encoder plugin (for exporting only)
 
+To automatically batch-convert mp4 videos to mov, simply `cd` onto the media location path and type `transcode`.
+All of the converted files will be on a new folder called "transcoded", inside your media folder.
 
-Either way, you need to pay close attention to your disk space after converting to .avi and .mov, or else you might end up with hundreds of gigabytes worth of converted files.
+<sup>* please pay close attention to your disk space after converting to .avi and .mov, or else you might end up with hundreds of gigabytes worth of converted files!
 
 ### User fonts
 
