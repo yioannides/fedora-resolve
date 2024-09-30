@@ -37,6 +37,8 @@ sudo mv libglib* libgio* libmodule* libgobject* disabled-libraries
 
 # installing h.264 encoder plugin (export only) & ffmpeg transcode script
 if [[ "$1" != "--studio" ]]; then
+    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf install -y ffmpeg
     cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
     'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done"' | tee -a /home/$USER/.bashrc
 
