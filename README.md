@@ -4,8 +4,6 @@
 
 This is a Davinci Resolve auto-installation script for Fedora 40+, that also includes AMD GPU fixes, as well as a h.264 video encoder plugin fix (for exporting only) and a transcoding script for the free version of Resolve.
 
-The reason for creating this script is because everyone using (or wanting to use) Davinci Resolve on Linux knows how arduous of a process installing the aforementioned is, but also being able to use an AMD dGPU with Davinci Resolve on Linux requires you to tinker with system directories, something not recommended for the uninitiated.
-
 ## Installation
 
 Execute the following command in Terminal:
