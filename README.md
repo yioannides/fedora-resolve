@@ -43,8 +43,6 @@ I personally use [Lightworks](https://lwks.com/) that works amazingly well on Li
 
 ## Acknowledgments
 
-Fedora 39 pixbuf / lippango fix → MiMillie : https://youtu.be/8jVTN1kLfZw
-
 h.264 export plugin → Perfect Linux Gaming : https://youtu.be/NoVQz79eSpw
 
 pobthebuilder's Python scripts for auto-downloading Resolve : https://github.com/pobthebuilder/resolve-flatpak
