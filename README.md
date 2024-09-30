@@ -42,4 +42,4 @@ h.264 export plugin → Perfect Linux Gaming : https://youtu.be/NoVQz79eSpw
 
 pobthebuilder's Python scripts for auto-downloading Resolve : https://github.com/pobthebuilder/resolve-flatpak
 
-Davinci Resolve, for making me realizing how terribly unoptimized is on Linux and helping me discover my current video editor of choice, Lightworks: https://lwks.com/
+Davinci Resolve, for helping me realize how terribly unoptimized it is on Linux and unironically helping me discover my current video editor of choice, Lightworks: https://lwks.com/
