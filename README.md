@@ -1,8 +1,5 @@
 # fedora-resolve
 
-> [!IMPORTANT]
-> Regressions are very likely, due to changes in API or libraries becoming deprecated.
-
 ## Introduction
 
 This is a Davinci Resolve auto-installation script for Fedora 40+, that also includes AMD GPU fixes, as well as a h.264 video encoder plugin fix (for exporting only) and a transcoding script for the free version of Resolve.
