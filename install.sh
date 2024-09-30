@@ -27,11 +27,9 @@ mkdir disabled-libraries
 sudo mv libglib* libgio* libmodule* libgobject* disabled-libraries
 # sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
-# installing h.264 video encoder plugin (export only)
+# installing h.264 encoder plugin (export only) & ffmpeg transcode script
 cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
+'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done"' | tee -a /home/$USER/.bashrc
 
 echo
 echo "Installation completed!"
-
-# to edit
-'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done"' | tee -a /home/$USER/.bashrc
