@@ -1,3 +1,5 @@
+#!/bin/bash
+
 tput clear
 echo
 echo -e "\033[97;44;1mDAVINCI RESOLVE INSTALLATION FOR FEDORA 41+ SCRIPT\033[0m"
@@ -14,8 +16,14 @@ lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidi
 # installing rocm for AMD drivers
 lspci | grep VGA -qi "AMD" && config-manager --add-repo=http://repo.radeon.com/rocm/yum/rpm -y && sudo dnf install -y rocm
 
+# check if the first argument is --studio
+STUDIO_ARG=""
+if [[ "$1" == "--studio" ]]; then
+    STUDIO_ARG="--studio"
+fi
+
 # downloading Davinci Resolve
-python python/main.py
+python python/main.py $STUDIO_ARG
 
 # installing DaVinci Resolve
 chmod +x ./*.run
@@ -28,8 +36,9 @@ sudo mv libglib* libgio* libmodule* libgobject* disabled-libraries
 # sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 encoder plugin (export only) & ffmpeg transcode script
-cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
-'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done"' | tee -a /home/$USER/.bashrc
+if [[ "$1" != "--studio" ]]; then
+    cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
+    'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done"' | tee -a /home/$USER/.bashrc
 
 echo
 echo "Installation completed!"
