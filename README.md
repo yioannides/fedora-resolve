@@ -8,21 +8,11 @@ The reason for creating this script is because everyone using (or wanting to use
 
 ## Installation instructions
 
-1. Clone this repo:
+Execute the following command in Terminal:
 ```sh
-git clone https://github.com/yioannides/fedora-resolve.git
+git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
-2. Register and download the [latest version of Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve).*
-
-4. Unzip Davinci Resolve's .zip file.
-
-5. Move the .run file to the `fedora-resolve` folder.
-
-6. Back in the terminal, execute the following command (requires sudo):
-```sh
-cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
-```
-<sup>* there are ways to bypass the registration screen, like [this python script](https://github.com/pobthebuilder/resolve-flatpak/blob/main/python/resolve_download.py) for example, but it involves autofilling bogus info, so I'm not sure Blackmagic's API will like that, so if anyone wants to build upon this script and make a PR for it, I'll be happy to implement it </sup>
+<sup>* include the argument `--studio` at the end of the script to download Davinci Resolve Studio instead
 
 ## Things to consider next
 
