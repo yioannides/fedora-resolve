@@ -14,6 +14,9 @@ lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidi
 # installing rocm for AMD drivers
 lspci | grep VGA -qi "AMD" && config-manager --add-repo=http://repo.radeon.com/rocm/yum/rpm -y && sudo dnf install -y rocm
 
+# downloading Davinci Resolve
+python python/main.py
+
 # installing DaVinci Resolve
 chmod +x ./*.run
 SKIP_PACKAGE_CHECK=1 ./*.run -i -y
