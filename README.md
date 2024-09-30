@@ -35,11 +35,13 @@ If you want to use your own fonts in Davinci Resolve for text input, you have to
 
 Your local user font folder in `~/.fonts` won't be seen by Davinci Resolve.
 
-## Conclusion
+## Opinion
 
-I started this shell script last year as a personal challenge (because I am not a programmer), but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is.
+I started this shell script as a non-programmer looking for a challenge, but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is and wouldn't personally recommend it to any Linux user.
 
-I personally use [Lightworks](https://lwks.com/) that works amazingly well on Linux; it's _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a familiar Resolve-esque UI and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering. Linux users deserve better, and Resolve on Linux just isn't it.
+My personal recommendation is [Lightworks](https://lwks.com/); a video editing software that is _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a familiar Resolve-esque UI, has a great community for technical support and all free and paid versions provide rich features.
+
+Linux users deserve better, and Resolve on Linux just isn't it.
 
 ## Acknowledgments
 
