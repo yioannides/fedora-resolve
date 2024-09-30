@@ -37,9 +37,9 @@ Your local fonts installed in `/home/$USER/.fonts` won't be seen by Davinci Reso
 
 ## Conclusion
 
-I wrote this shell script as a personal challenge (because I am not a programmer), but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is.
+I started this shell script last year as a personal challenge (because I am not a programmer), but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is.
 
-I personally use [Lightworks](https://lwks.com/) that works amazingly well on Linux; it's _actually_ natively supported on Linux (with both .rpm and .deb packages available), offers a beautiful Resolve-esque UI and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering. Linux users deserve better, and Resolve on Linux just isn't it.
+I personally use [Lightworks](https://lwks.com/) that works amazingly well on Linux; it's _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a beautiful Resolve-esque UI and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering. Linux users deserve better, and Resolve on Linux just isn't it.
 
 ## Acknowledgments
 
