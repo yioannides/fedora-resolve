@@ -1,5 +1,8 @@
 # fedora-resolve
 
+> [!IMPORTANT]
+> Regressions are very likely, due to changes in API or libraries becoming deprecated.
+
 ## Introduction
 
 This is a Davinci Resolve auto-installation script for Fedora 40+, that also includes AMD GPU fixes, as well as a h.264 video encoder plugin fix (for exporting only) and a transcoding script for the free version of Resolve.
@@ -39,7 +42,7 @@ Your local user font folder in `~/.fonts` won't be seen by Davinci Resolve.
 
 I started this shell script last year as a personal challenge (because I am not a programmer), but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is.
 
-I personally use [Lightworks](https://lwks.com/) that works amazingly well on Linux; it's _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a beautiful Resolve-esque UI and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering. Linux users deserve better, and Resolve on Linux just isn't it.
+I personally use [Lightworks](https://lwks.com/) that works amazingly well on Linux; it's _factually_ supported natively on Linux (with both .rpm and .deb packages available), offers a familiar Resolve-esque UI and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering. Linux users deserve better, and Resolve on Linux just isn't it.
 
 ## Acknowledgments
 
