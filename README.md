@@ -20,7 +20,7 @@ git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve 
 
 Due to licensing issues, it is not possible to import mp4 files on the free Linux version of Davinci Resolve. 
 Therefore, installing the free version of Resolve also includes:
-- a transcoder script that automatically converts every .mp4 file on the user's project folder (via `ffmpeg`) and converts them to .mov files in a new folder
+- a transcoder script for batch conversion from .mp4 to .mov (via `ffmpeg`)
 - an additional mp4 encoder plugin (for exporting only)
 
 To automatically batch-convert .mp4 videos to .mov, simply `cd` onto your project's media folder and type `transcode`.
@@ -37,14 +37,14 @@ Your local fonts installed in `/home/$USER/.fonts` won't be seen by Davinci Reso
 
 ## Conclusion
 
-I wrote this shell script as a personal challenge (because I am not a programmer), but upon completing it, I realized how unoptimized (the free version of) Davinci Resolve for Linux is.
+I wrote this shell script as a personal challenge (because I am not a programmer), but upon completing it, I realized how truly unoptimized Davinci Resolve for Linux is.
 
-Surely figuring out how to properly install and use DR on Linux is a small victory in itself, but batch converting mp4 videos every time I want to drag and drop something in DR is not my idea of productivity and above all, the notion that a piece of software is this hard to install completely put me off.
-
-With that said, I switched to Kdenlive and I'm currently very happy with it. I would also like to recommend [Lightworks](https://lwks.com/) that works great on Linux; it's very easy to install, offers a beautiful UI (very similar to DR) and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering.
+With that said, I would urge everyone to instead support software like [Lightworks](https://lwks.com/) that works great on Linux; it's very easy to install, offers a beautiful UI (very similar to Resolve) and has a great community for technical support. The free tier only offers 720p video export, but both Create and Pro tiers are cheaper than Davinci Resolve Studio, so it's something worth considering.
 
 ## Acknowledgments
 
 Fedora 39 pixbuf / lippango fix → MiMillie : https://youtu.be/8jVTN1kLfZw
 
 h.264 export plugin → Perfect Linux Gaming : https://youtu.be/NoVQz79eSpw
+
+pobthebuilder's Python scripts for auto-downloading Resolve : https://github.com/pobthebuilder/resolve-flatpak
