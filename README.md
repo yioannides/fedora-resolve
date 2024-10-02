@@ -6,7 +6,7 @@ Execute the following command in Terminal:
 ```sh
 git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
-<sup>* to install the Studio version, add the optional argument `--studio` at the end of the script above
+- To install the Studio version, add the optional argument `--studio` at the end of the script above.
 
 ## Things to consider next
 
@@ -34,8 +34,8 @@ Your local user font folder in `~/.fonts` won't be seen by Davinci Resolve.
 
 ## Acknowledgments
 
-h.264 export plugin → Perfect Linux Gaming : https://youtu.be/NoVQz79eSpw
+<b>h.264 export plugin → Perfect Linux Gaming</b> : https://youtu.be/NoVQz79eSpw
 
-pobthebuilder's Python scripts for auto-downloading Resolve : https://github.com/pobthebuilder/resolve-flatpak
+<b>pobthebuilder's Python scripts for auto-downloading Resolve</b> : https://github.com/pobthebuilder/resolve-flatpak
 
-Davinci Resolve, for helping me realize how terribly unoptimized it is on Linux and unironically helping me discover my current video editor of choice, Lightworks: https://lwks.com/
+Davinci Resolve, for helping me realize how terribly unoptimized it is on Linux and unironically helping me discover my current video editor of choice, <b>Lightworks</b> : https://lwks.com/
