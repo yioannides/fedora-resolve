@@ -45,4 +45,4 @@ if [[ "$1" != "--studio" ]]; then
 fi
 
 echo
-echo "Installation completed!"
+echo "Installation complete!"
