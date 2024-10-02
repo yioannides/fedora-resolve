@@ -33,10 +33,8 @@ SKIP_PACKAGE_CHECK=1 ./*.run -i -y
 cd /opt/resolve/libs
 mkdir disabled-libraries
 sudo mv libglib* libgio* libgmodule* libgobject* disabled-libraries
-# sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 encoder plugin (export only) & ffmpeg transcode script
-
 USER_HOME=$(eval echo ~$SUDO_USER)
 
 if [[ "$1" != "--studio" ]]; then
