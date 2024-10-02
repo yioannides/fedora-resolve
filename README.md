@@ -1,4 +1,4 @@
-![final](https://github.com/user-attachments/assets/8cece233-4aa9-489b-a198-0b0df2bc13e7)
+![showcase](https://github.com/user-attachments/assets/efa1e12b-f4e7-45fc-9f25-02d7d176b2df)
 
 ## Installation
 
