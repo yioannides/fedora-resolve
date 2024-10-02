@@ -40,7 +40,7 @@ USER_HOME=$(eval echo ~$SUDO_USER)
 if [[ "$1" != "--studio" ]]; then
     sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
     sudo dnf install -y ffmpeg --allowerasing
-    cp -r "$USER_HOME/fedora-resolve/h264/"* /opt/resolve/IOPlugins/
+    cp -r "$USER_HOME/fedora-resolve/h264/" /opt/resolve/IOPlugins/
     echo 'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i \"$i\" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov \"transcoded/${i%.*}.mov\"; done"' >> "$USER_HOME/.bashrc"
 fi
 
