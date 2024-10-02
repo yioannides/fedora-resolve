@@ -34,8 +34,8 @@ Your local user font folder in `~/.fonts` won't be seen by Davinci Resolve.
 
 ## Acknowledgments
 
-<b>h.264 export plugin → Perfect Linux Gaming</b> : https://youtu.be/NoVQz79eSpw
+<b>Perfect Linux Gaming</b> for the h.264 export plugin : https://youtu.be/NoVQz79eSpw
 
-<b>pobthebuilder's Python scripts for auto-downloading Resolve</b> : https://github.com/pobthebuilder/resolve-flatpak
+<b>pobthebuilder's Python scripts</b> for auto-downloading Resolve : https://github.com/pobthebuilder/resolve-flatpak
 
 Davinci Resolve, for helping me realize how terribly unoptimized it is on Linux and unironically helping me discover my current video editor of choice, <b>Lightworks</b> : https://lwks.com/
