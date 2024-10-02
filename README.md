@@ -12,7 +12,7 @@ git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve 
 
 ### No mp4 import / AAC audio format
 
-Due to licensing issues, it is not possible to import mp4 files on the free Linux version of Davinci Resolve. 
+Due to licensing issues, it is not possible to import .mp4 files on the free Linux version of Davinci Resolve. 
 Therefore, installing the free version of Resolve also includes:
 - a transcoder script for batch conversion from .mp4 to .mov (via `ffmpeg`)
 - an additional mp4 encoder plugin (for exporting only)
