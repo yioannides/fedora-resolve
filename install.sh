@@ -14,7 +14,7 @@ sudo dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU --allower
 lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 
 # installing rocm for AMD drivers
-lspci | grep VGA -qi "AMD" && config-manager --add-repo=http://repo.radeon.com/rocm/yum/rpm -y && sudo dnf install -y rocm
+lspci | grep -i "VGA" | grep -qi "AMD" && sudo dnf install -y rocm-opencl
 
 # check if the first argument is --studio
 STUDIO_ARG=""
@@ -32,15 +32,18 @@ SKIP_PACKAGE_CHECK=1 ./*.run -i -y
 # resolving dependencies
 cd /opt/resolve/libs
 mkdir disabled-libraries
-sudo mv libglib* libgio* libmodule* libgobject* disabled-libraries
+sudo mv libglib* libgio* libgmodule* libgobject* disabled-libraries
 # sudo cp -f /usr/lib64/libglib-2.0.so.0.* /opt/resolve/libs/
 
 # installing h.264 encoder plugin (export only) & ffmpeg transcode script
+
+USER_HOME=$(eval echo ~$SUDO_USER)
+
 if [[ "$1" != "--studio" ]]; then
-    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
     sudo dnf install -y ffmpeg
-    cp -r '/home/$USER/fedora-resolve/h264/'* /opt/resolve/IOPlugins/
-    'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.*}.mov"; done"' | tee -a /home/$USER/.bashrc
+    cp -r "$USER_HOME/fedora-resolve/h264/"* /opt/resolve/IOPlugins/
+    echo 'alias transcode="mkdir -p transcoded; for i in *.mp4; do ffmpeg -i \"$i\" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov \"transcoded/${i%.*}.mov\"; done"' >> "$USER_HOME/.bashrc"
+fi
 
 echo
 echo "Installation completed!"
