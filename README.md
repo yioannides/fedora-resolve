@@ -15,7 +15,7 @@ git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve 
 Due to licensing issues, it is not possible to import .mp4 files on the free Linux version of Davinci Resolve.<br>
 Therefore, installing the free version of Resolve also includes:
 - a transcoder script for batch conversion from .mp4 to .mov (via `ffmpeg`)
-- an additional mp4 encoder plugin (for exporting only)
+- an additional h.264 video encoder plugin (for exporting only)
 
 To automatically batch-convert .mp4 videos to .mov: 
 1. `cd` onto your project's media folder and
