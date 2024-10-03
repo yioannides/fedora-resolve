@@ -1,6 +1,7 @@
 import json
 import zipfile
 import requests
+from random import randint
 from version import Version
 
 cookies = {
@@ -46,17 +47,21 @@ def get_latest_version_information(app_tag: str, refer_id: str = '77ef91f67a9e41
         beta=parsed_response["linux"]["beta"] if "beta" in parsed_response["linux"] else -1
     ), parsed_response["linux"]["releaseId"], parsed_response["linux"]["downloadId"])
 
+def generate_info():
+    response = requests.get("https://randomuser.me/api/")
+    return response.json()
 
 def download_using_id(download_id: str, refer_id: str = "77ef91f67a9e411bbbe299e595b4cfcc"):
+    id = generate_info()
     download_url_data = {
-        "firstname": "John",
-        "lastname": "Doe",
-        "email": "johndoe.davinci@gmail.org",
-        "phone": "404-264-1526",
-        "country": "us",
-        "state": "Georgia",
-        "city": "Atlanta",
-        "street": "4342 Post Farm Road",
+        "firstname": id["results"][0]["name"]["first"],
+        "lastname": id["results"][0]["name"]["last"],
+        "email": id["results"][0]["email"][:-12] + str(randint(150, 650)) + "@gmail.com",
+        "phone": id["results"][0]["phone"].replace("(", "").replace(") ", "-"),
+        "country": id["results"][0]["location"]["country"],
+        "state": id["results"][0]["location"]["state"],
+        "city": id["results"][0]["location"]["city"],
+        "street": str(id["results"][0]["location"]["street"]["number"]) + " " + id["results"][0]["location"]["street"]["name"],
         "product": "DaVinci Resolve"
     }
 
