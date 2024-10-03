@@ -48,7 +48,7 @@ def get_latest_version_information(app_tag: str, refer_id: str = '77ef91f67a9e41
     ), parsed_response["linux"]["releaseId"], parsed_response["linux"]["downloadId"])
 
 def generate_info():
-    response = requests.get("https://randomuser.me/api/")
+    response = requests.get("https://randomuser.me/api/?nat=us")
     return response.json()
 
 def download_using_id(download_id: str, refer_id: str = "77ef91f67a9e411bbbe299e595b4cfcc"):
@@ -58,7 +58,7 @@ def download_using_id(download_id: str, refer_id: str = "77ef91f67a9e411bbbe299e
         "lastname": id["results"][0]["name"]["last"],
         "email": id["results"][0]["email"][:-12] + str(randint(150, 650)) + "@gmail.com",
         "phone": id["results"][0]["phone"].replace("(", "").replace(") ", "-"),
-        "country": id["results"][0]["location"]["country"],
+        "country": "us",
         "state": id["results"][0]["location"]["state"],
         "city": id["results"][0]["location"]["city"],
         "street": str(id["results"][0]["location"]["street"]["number"]) + " " + id["results"][0]["location"]["street"]["name"],
