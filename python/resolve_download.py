@@ -56,7 +56,7 @@ def download_using_id(download_id: str, refer_id: str = "77ef91f67a9e411bbbe299e
     download_url_data = {
         "firstname": id["results"][0]["name"]["first"],
         "lastname": id["results"][0]["name"]["last"],
-        "email": id["results"][0]["email"][:-12] + str(randint(150, 650)) + "@gmail.com",
+        "email": id["results"][0]["email"][:-12] + str(randint(150, 4000)) + "@gmail.com",
         "phone": id["results"][0]["phone"].replace("(", "").replace(") ", "-"),
         "country": "us",
         "state": id["results"][0]["location"]["state"],
