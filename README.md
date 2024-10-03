@@ -8,7 +8,7 @@ git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve 
 ```
 - To install the Studio version, add the optional argument `--studio` at the end of the script above.
 
-## Things to consider next
+## Things to consider
 
 ### No mp4 import / AAC audio format
 
