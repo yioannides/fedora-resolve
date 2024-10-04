@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> At the time of release, everything works 100%, but please note that API access, workarounds and libraries can be deprecated at any time.
+
 ![showcase](https://github.com/user-attachments/assets/efa1e12b-f4e7-45fc-9f25-02d7d176b2df)
 
 ## Installation
@@ -6,7 +9,9 @@ Execute the following command in Terminal:
 ```sh
 git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
-- To install the Studio version, add the optional argument `--studio` at the end of the script above.
+- To install the Studio version*, add the optional argument `--studio` at the end of the script above.
+
+<sup>* I don't own a Davinci Resolve Studio license, so I was not able to test anything past downloading its executable.
 
 ## Things to consider
 
