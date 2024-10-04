@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > At the time of release, everything works 100%, but please note that API access, workarounds and libraries can be deprecated at any time.
 
-![showcase](https://github.com/user-attachments/assets/efa1e12b-f4e7-45fc-9f25-02d7d176b2df)
+![showcase](https://github.com/user-attachments/assets/0314d0d3-dbd7-4fd8-a712-00465affbbdc)
 
 ## Installation
 
