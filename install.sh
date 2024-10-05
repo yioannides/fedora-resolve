@@ -7,6 +7,12 @@ echo -e "\033[1mby yiannis ioannides\033[0m"
 echo
 sleep 1
 
+# check if the first argument is --studio
+STUDIO_ARG=""
+if [[ "$1" == "--studio" ]]; then
+    STUDIO_ARG="--studio"
+fi
+
 # distro-specific installs
 DISTRO=$(lsb_release -is)
 case "$DISTRO" in
@@ -26,12 +32,6 @@ case "$DISTRO" in
         # placeholder for other distros
         ;;
 esac
-
-# check if the first argument is --studio
-STUDIO_ARG=""
-if [[ "$1" == "--studio" ]]; then
-    STUDIO_ARG="--studio"
-fi
 
 # downloading Davinci Resolve
 python python/main.py $STUDIO_ARG
