@@ -18,8 +18,8 @@ case "$DISTRO" in
         lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 	lspci | grep -i "VGA" | grep -qi "AMD" && sudo dnf install -y rocm-opencl
 	if [[ "$1" != "--studio" ]]; then
-   		sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-		sudo dnf install -y ffmpeg --allowerasing
+   	    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+	    sudo dnf install -y ffmpeg --allowerasing
 	fi
         ;;
     *)
@@ -58,7 +58,7 @@ fi
 
 # updater script
 if ! grep -q 'alias resolve-update=' "$USER_HOME/.bashrc"; then 
-	echo 'alias resolve-update="git clone https://github.com/yioannides/resolve-linux.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh"' >> "$USER_HOME/.bashrc"
+    echo 'alias resolve-update="git clone https://github.com/yioannides/resolve-linux.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh"' >> "$USER_HOME/.bashrc"
 fi
 
 echo
