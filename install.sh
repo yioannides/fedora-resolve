@@ -45,9 +45,10 @@ cd /opt/resolve/libs
 mkdir disabled-libraries
 sudo mv libglib* libgio* libgmodule* libgobject* disabled-libraries
 
-# installing h.264 encoder plugin (export only) & transcoder script
+# defining Home in sudo
 USER_HOME=$(eval echo ~$SUDO_USER)
 
+# installing h.264 encoder plugin (export only) & transcoder script
 if [[ "$1" != "--studio" ]]; then
     cp -r "$USER_HOME/fedora-resolve/h264/" /opt/resolve/IOPlugins/
     if ! grep -q 'alias transcode=' "$USER_HOME/.bashrc"; then 
