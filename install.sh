@@ -16,11 +16,11 @@ case "$DISTRO" in
     Fedora)
         sudo dnf install -y libxcrypt-compat libcurl libcurl-devel mesa-libGLU --allowerasing
         lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
-	    lspci | grep -i "VGA" | grep -qi "AMD" && sudo dnf install -y rocm-opencl
-	    if [[ "$1" != "--studio" ]]; then
-   		    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-		    sudo dnf install -y ffmpeg --allowerasing
-	    fi
+	lspci | grep -i "VGA" | grep -qi "AMD" && sudo dnf install -y rocm-opencl
+	if [[ "$1" != "--studio" ]]; then
+   		sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+		sudo dnf install -y ffmpeg --allowerasing
+	fi
         ;;
     *)
         # placeholder for other distros
