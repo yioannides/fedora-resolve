@@ -28,6 +28,9 @@ case "$DISTRO" in
 	    sudo dnf install -y ffmpeg --allowerasing
 	fi
         ;;
+    OpenSUSE)
+        sudo zypper in -y libapr1-0 libapr-util1-0 libopencl-clang14 libopenCL1 mesa-libopenCL libpango-1_0-0 libpango1_0-0-32bit libpangomm-1_4-1 libpango-2_48-1
+        ;;
     *)
         # placeholder for other distros
         ;;
