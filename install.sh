@@ -16,7 +16,7 @@ fi
 # distro-specific installs
 DISTRO=$(lsb_release -is)
 case "$DISTRO" in
-    Ubuntu|Debian)
+    Ubuntu|Debian|Pop|Linuxmint)
         sudo apt install libasound2t64 libaprutil1t64 libasound2t64 libglib2.0-0t64 libxcb-composite0 libxcb-cursor0
         ;;
     Fedora)
@@ -28,10 +28,10 @@ case "$DISTRO" in
 	    sudo dnf install -y ffmpeg --allowerasing
 	fi
         ;;
-    OpenSUSE)
+    openSUSE)
         sudo zypper in -y libapr1-0 libapr-util1-0 libopencl-clang14 libopenCL1 mesa-libopenCL libpango-1_0-0 libpango1_0-0-32bit libpangomm-1_4-1 libpango-2_48-1
         ;;
-    *)
+    Arch|cachyos|ManjaroLinux)
         # placeholder for other distros
         ;;
 esac
