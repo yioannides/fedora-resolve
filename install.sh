@@ -16,7 +16,7 @@ fi
 # distro-specific installs
 DISTRO=$(lsb_release -is)
 case "$DISTRO" in
-    Ubuntu|Debian|Pop|Linuxmint)
+    Ubuntu|Debian|Pop|Linuxmint|Elementary)
         sudo apt install libasound2t64 libaprutil1t64 libasound2t64 libglib2.0-0t64 libxcb-composite0 libxcb-cursor0
         ;;
     Fedora)
