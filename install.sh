@@ -51,7 +51,7 @@ USER_HOME=$(eval echo ~$SUDO_USER)
 if [[ "$1" != "--studio" ]]; then
     cp -r "$USER_HOME/fedora-resolve/h264/" /opt/resolve/IOPlugins/
     if ! grep -q 'alias transcode=' "$USER_HOME/.bashrc"; then 
-        echo 'alias transcode="mkdir -p transcoded; for i in *.mp4; do [ -f "$i" ] && echo "Processing $i" && ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "transcoded/${i%.mp4}.mov"; done"' >> "$USER_HOME/.bashrc"
+        echo 'alias transcode="mkdir -p transcoded; for i in *.mp4; do [ -f '$i' ] && echo 'Processing $i' && ffmpeg -i '$i' -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov 'transcoded/${i%.mp4}.mov'; done"' >> "$USER_HOME/.bashrc"
     fi
 fi
 
