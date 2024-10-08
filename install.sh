@@ -24,8 +24,8 @@ case "$DISTRO" in
         lspci | grep -qi "NVIDIA" && sudo dnf install -y akmod-nvidia xorg-x11-drv-nvidia-cuda
 	lspci | grep -i "VGA" | grep -qi "AMD" && sudo dnf install -y rocm-opencl
 	if [[ "$1" != "--studio" ]]; then
-   	    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	    sudo dnf install -y ffmpeg --allowerasing
+   	    # sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+	    # sudo dnf install -y ffmpeg --allowerasing
 	fi
         ;;
     openSUSE)
