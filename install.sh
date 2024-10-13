@@ -57,7 +57,7 @@ fi
 
 # updater script
 if ! grep -q 'alias resolve-update=' "$USER_HOME/.bashrc"; then 
-    echo 'alias resolve-update="git clone https://github.com/yioannides/resolve-linux.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh"' >> "$USER_HOME/.bashrc"
+    echo 'alias resolve-update="git clone https://github.com/yioannides/resolve-linux.git && cd resolve-linux && chmod +x ./install.sh && sudo ./install.sh"' >> "$USER_HOME/.bashrc"
 fi
 
 echo
