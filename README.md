@@ -5,7 +5,7 @@
 
 ## Installation
 
-Execute the following command in Terminal:
+Simply copy-paste the following command in Terminal and enter your user password:
 ```sh
 git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
