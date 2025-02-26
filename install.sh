@@ -23,7 +23,7 @@ if [[ "$1" == "--studio" ]]; then
 fi
 
 # downloading Davinci Resolve
-python python/main.py $STUDIO_ARG
+python src/main.py $STUDIO_ARG
 
 # installing DaVinci Resolve
 chmod +x ./*.run
