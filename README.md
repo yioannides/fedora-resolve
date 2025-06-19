@@ -7,7 +7,8 @@
 
 Simply copy-paste the following command in Terminal and enter your user password:
 ```sh
-git clone https://github.com/yioannides/fedora-resolve.git && cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
+git clone https://github.com/yioannides/fedora-resolve.git &&
+cd fedora-resolve && chmod +x ./install.sh && sudo ./install.sh
 ```
 - To install the Studio version*, add the optional argument `--studio` at the end of the script above.
 
